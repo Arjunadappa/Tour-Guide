@@ -1,9 +1,16 @@
 <div class="header">
   <div class="nav nav-el">ALL TOURS</div>
   <div class="nav nav-user">
-    <div>
+    <div *ngIf="!userdetails">
       <div class="nav-el" [routerLink]="['/login']">Login</div>
       <div class="nav-el nav-el--cta" [routerLink]="['/sign-up']">Sign Up</div>
+    </div>
+    <div class="nav" *ngIf="userdetails">
+      <div class=" nav-el" (click)="logout()" >Logout</div>
+      <div class="nav-el" >
+        <img class="nav__user-img" src="assets/users/{{userdetails.data.data.photo}}" alt="hello">
+        <span>{{userdetails.data.data.name}}</span>
+      </div>
     </div>
 
 

@@ -36,7 +36,10 @@ export class LoginComponent implements OnInit {
     urlencoded.set("email", userData.email);
     urlencoded.set("password", userData.password);
     this.httpService.login(urlencoded.toString()).subscribe(
-      data => console.log(data)
+      (data) => {
+        console.log(data)
+        this.httpService.emitChange(true)
+      }
       ,(error => console.log(error))
     )
   }
