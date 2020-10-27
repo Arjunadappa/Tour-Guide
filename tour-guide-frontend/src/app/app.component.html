@@ -1,5 +1,5 @@
 <div class="header">
-  <div class="nav nav-el">ALL TOURS</div>
+  <div class="nav nav-el" [routerLink]="['/']">ALL TOURS</div>
   <div class="nav nav-user">
     <div *ngIf="!userdetails">
       <div class="nav-el" [routerLink]="['/login']">Login</div>

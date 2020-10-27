@@ -37,4 +37,7 @@ export class HttpserviceService {
   emitChange(change: any) {
     this.emitChangeSource.next(change);
   }
+  getTours() : Observable<any>{
+    return this.http.get('http://localhost:3000/api/v1/tours',{withCredentials:true})
+  }
 }

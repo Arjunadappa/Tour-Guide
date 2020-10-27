@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
       (data) => {
         console.log(data)
         this.httpService.emitChange(true)
+        this.router.navigate(["/"])
       }
       ,(error => console.log(error))
     )
