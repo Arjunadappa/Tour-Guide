@@ -1,28 +1,32 @@
-<div class="main">
-  <div class="sign-up-form-container">
-    <h2 class="heading-secondary ma-bt-lg">Sign Up</h2>
-    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit(signUpForm.value)">
-      <div class="form__group">
-        <label class="form__label" for="name">Name</label>
-        <input type="text" placeholder="Name" formControlName="name" id="name" name="name" class="form__input" required autocomplete=off/>
-      </div>
-      <div class="form__group">
-        <label class="form__label" for="email">Email</label>
-        <input type="email" placeholder="Email" formControlName="email" id="email" name="email" class="form__input" required autocomplete=off/>
-      </div>
-      <div class="form__group">
-        <label class="form__label" for="password">Password</label>
-        <input type="password" placeholder="••••••••" formControlName="password" id="password" name="password" class="form__input" required autocomplete=off/>
-      </div>
-      <div class="form__group">
-        <label class="form__label" for="passwordConfirm">Confirm Password</label>
-        <input type="password" placeholder="••••••••" formControlName="passwordConfirm" id="passwordConfirm" name="passwordConfirm" class="form__input" required autocomplete=off/>
+
+<main>
+
+
+  <div class="sign-background">
+    <div class="text">
+
+      <h1><i class='ion-md-log-in'></i>Signup</h1>
+      <a [routerLink]="['/login']">Login Instead</a>
+    </div>
+
+    <div class="box">
+      <div class="form-container form-signup">
+
+        <form [formGroup]="signUpForm" (ngSubmit)="onSubmit(signUpForm.value)" class="form">
+
+          <input type="text" formControlName="name" id="username" class="username" placeholder="Username" required>
+          <input type="email" formControlName="email" id="email" class ="email" placeholder="Email" required>
+          <input type="password" formControlName="password" id="password" class="password" placeholder="Password" required>
+          <input type="password" class="password" formControlName="passwordConfirm" id="passwordConfirm" placeholder="Confirm password" required>
+          <input type="submit" value = 'SignUp' class="button">
+
+        </form>
       </div>
 
-      <div class="form__group">
-        <button type="submit" class="btn btn--green">Create Account</button>
-      </div>
+      <h1 class = "copy">&#169; Adventours 2020</h1>
+    </div>
 
-    </form>
+
   </div>
-</div>
+  <h1 class = "copy">&#169; Adventours 2020</h1>
+</main>

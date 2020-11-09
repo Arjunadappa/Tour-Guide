@@ -1,48 +1,128 @@
-.login-form {
-  margin: 0 auto;
-  max-width: 55rem;
-  background-color: #fff;
-  -webkit-box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.06);
-  box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.06);
-  padding: 5rem 7rem;
+
+.sign-background {
+  background: linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.75) 100%), url('../../assets/wallpaperflare.com_wallpaper.jpg') center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.text,
+.box {
+  margin-top: 20vh;
+}
+
+::placeholder {
+
+  color: #ffffffa8;
+}
+
+
+
+
+.login {
+  margin-left: 10%;
+  font-weight: 300;
+
+}
+
+.box {
+  margin-left: 25%;
+}
+
+.text h1 {
+  font-size: 70px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.text p {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+a {
+  color: white;
+}
+
+.text p a {
+  color: #ffffff;
+  font-weight: 700;
+
+
+}
+
+.form {
+  background: transparent;
+  color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+
+
+}
+.form h1{
+  font-size : 0.8rem;
+}
+
+.form-container {
+  border: solid 1px #fff;
+  padding: 80px;
+  height: 70vh;
   border-radius: 5px;
 }
-.form__group:not(:last-child) {
-  margin-bottom: 2.5rem;
-}
-.form__label {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-}
-.form__input {
-  display: block;
-  font-family: inherit;
-  font-size: 1.5rem;
-  color: inherit;
-  padding: 1.25rem 1.75rem;
+
+input {
+  margin: 20px 0;
+  padding: 10px;
+  background: transparent;
   border: none;
-  width: 100%;
-  background-color: #fff;
-  background-color: #f2f2f2;
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  border-radius: 4px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  /* Pseudo element (a visible thing that isn't really in the DOM).
-      Also needs -ms- */
-}
-.form__input:focus {
   outline: none;
-  border-bottom: 3px solid #55c57a;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
 }
-.form__input:focus:invalid {
-  border-bottom: 3px solid #ff7730;
+
+.username,
+.password,
+.email {
+  border-bottom: 1px solid #fff;
 }
-.form__input::-webkit-input-placeholder {
-  color: #bbb;
+
+.button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.8s;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.form-container h1 {
+  text-align: center;
+  color: white;
+}
+
+.button:hover {
+
+  color: black;
+  background-color: pink;
+}
+
+.form-signup {
+  padding: 60px;
+}
+
+.copy {
+  color: white;
+  opacity: 0.2;
+  text-align: center;
+  font-size: 12px;
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
 }

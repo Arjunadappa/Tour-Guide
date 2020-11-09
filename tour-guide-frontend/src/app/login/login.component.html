@@ -1,21 +1,30 @@
-<div class="main">
-  <div class="login-form">
-    <h2 class="heading-secondary ma-bt-lg">Log Into Your Account</h2>
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+<main>
 
-      <div class="form__group">
-        <label class="form__label" for="email">Email</label>
-        <input type="email" placeholder="Email" formControlName="email" id="email" name="email" class="form__input" required autocomplete=off/>
-      </div>
-      <div class="form__group">
-        <label class="form__label" for="password">Password</label>
-        <input type="password" placeholder="••••••••" formControlName="password" id="password" name="password" class="form__input" required autocomplete=off/>
+
+  <div class="sign-background">
+    <div class="text">
+
+      <h1><i class='ion-md-log-in'></i>Login</h1>
+      <p>No Account?<a [routerLink]="['/sign-up']" >SignUp</a></p>
+    </div>
+
+    <div class="box">
+      <div class="form-container">
+        <h1>Welcome Back</h1>
+        <form  [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)" class="form">
+
+          <input type="email" class="email" formControlName="email" id="email" placeholder="Email" required>
+          <input type="password" class="password" formControlName="password" id="password" placeholder="Password" required>
+          <input type="submit" value = 'Login' class="button">
+          <h1>Forgot Password?</h1>
+
+        </form>
       </div>
 
-      <div class="form__group">
-        <button type="submit" class="btn btn--green">Create Account</button>
-      </div>
+      <h1 class = "copy">&#169; Adventours 2020</h1>
+    </div>
 
-    </form>
+
   </div>
-</div>
+  <h1 class = "copy">&#169; Adventours 2020</h1>
+</main>

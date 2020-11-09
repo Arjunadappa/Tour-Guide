@@ -1,19 +1,19 @@
-<div class="header">
-  <div class="nav nav-el" [routerLink]="['/']">ALL TOURS</div>
-  <div class="nav nav-user">
-    <div *ngIf="!userdetails">
-      <div class="nav-el" [routerLink]="['/login']">Login</div>
-      <div class="nav-el nav-el--cta" [routerLink]="['/sign-up']">Sign Up</div>
-    </div>
-    <div class="nav" *ngIf="userdetails">
-      <div class=" nav-el" (click)="logout()" >Logout</div>
-      <div class="nav-el" >
-        <img class="nav__user-img" src="assets/users/{{userdetails.data.data.photo}}" alt="hello">
-        <span>{{userdetails.data.data.name}}</span>
-      </div>
-    </div>
+<!--<div class="header">-->
+<!--  <div class="nav nav-el" [routerLink]="['/']">ALL TOURS</div>-->
+<!--  <div class="nav nav-user">-->
+<!--    <div *ngIf="!userdetails">-->
+<!--      <div class="nav-el" [routerLink]="['/login']">Login</div>-->
+<!--      <div class="nav-el nav-el&#45;&#45;cta" [routerLink]="['/sign-up']">Sign Up</div>-->
+<!--    </div>-->
+<!--    <div class="nav" *ngIf="userdetails">-->
+<!--      <div class=" nav-el" (click)="logout()" >Logout</div>-->
+<!--      <div class="nav-el" >-->
+<!--        <img class="nav__user-img" src="assets/users/{{userdetails.data.data.photo}}" alt="hello">-->
+<!--        <span>{{userdetails.data.data.name}}</span>-->
+<!--      </div>-->
+<!--    </div>-->
 
 
-  </div>
-</div>
+<!--  </div>-->
+<!--</div>-->
 <router-outlet></router-outlet>
