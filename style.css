@@ -567,6 +567,7 @@ span {
   justify-content: space-between;
   align-items: center;
   margin-top: 25px;
+  position: relative;
 
 
 }
@@ -576,6 +577,8 @@ span {
   color: white;
   font-size: 15px;
   font-weight: bold;
+  position: absolute;
+  margin-left :  25px;
 
 }
 
@@ -649,7 +652,8 @@ span {
 .button3>ion-icon {
 
   position: relative;
-  margin-left: 40px;
+  margin-left : 65px !important;
+ 
 }
 
 .button3>span {
@@ -685,7 +689,7 @@ span {
 .button4>ion-icon {
 
   position: relative;
-  margin-left: 40px;
+  margin-left: 65px;
 }
 
 .button4>span {
@@ -704,7 +708,7 @@ span {
 .button7>ion-icon {
 
   position: relative;
-  margin-left: 40px;
+  margin-left: 65px;
 }
 
 .button7>span {
