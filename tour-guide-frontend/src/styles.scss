@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --spanish-violet: #44318D;
+  --spanish-violet-lowkey: #2A1B3D;
+  --medium-turquoise: #4ecdc4ff;
+  --white: #ffffffff;
+  --bittersweet: #D83F87;
+  --white-2: #A4B3B6;
 
+}
 *,
 *::before,
 *::after {
@@ -11,8 +19,15 @@
 html {
 
   font-family: 'Nunito', 'sans-serif';
-  font-size: 10px;
   box-sizing: border-box;
+}
+body {
+
+
+
+  font-size: 1.6rem;
+  color: var(--medium-turquoise);
+
 }
 .main {
   background-color: #f7f7f7;

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {SignUpComponent} from "./sign-up/sign-up.component";
 import {LoginComponent} from "./login/login.component";
 import {OverviewComponent} from "./overview/overview.component";
+import {ExploreComponent} from "./explore/explore.component"
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
     // canActivate: [UserAuthGuard]
+  },
+  {
+    path: 'explore',
+    component: ExploreComponent
   }
 ];
 

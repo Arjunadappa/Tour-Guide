@@ -9,13 +9,18 @@ import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { OverviewComponent } from './overview/overview.component'
 import { CommonModule } from "@angular/common";
+import { ExploreComponent } from './explore/explore.component';
+import { IonicModule } from '@ionic/angular';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     LoginComponent,
-    OverviewComponent
+    OverviewComponent,
+    ExploreComponent
   ],
     imports: [
         BrowserModule,
@@ -23,7 +28,8 @@ import { CommonModule } from "@angular/common";
         ReactiveFormsModule,
         HttpClientModule,
         FormsModule,
-        CommonModule
+        CommonModule,
+        IonicModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
