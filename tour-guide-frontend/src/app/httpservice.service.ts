@@ -40,4 +40,7 @@ export class HttpserviceService {
   getTours() : Observable<any>{
     return this.http.get('http://localhost:3000/api/v1/tours',{withCredentials:true})
   }
+  getTour(id) : Observable<any>{
+    return this.http.get(`http://localhost:3000/api/v1/tours/${id}`,{withCredentials:true})
+  }
 }

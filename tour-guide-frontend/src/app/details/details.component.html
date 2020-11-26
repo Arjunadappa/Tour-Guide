@@ -1,0 +1,36 @@
+<div class="container">
+  <nav class="navcontainer">
+    <div class="nav-brand">
+      <a href="index.html">
+        <img src="assets/adventure-hiking-hiker-trekking-hike-journey-backpacker-512.png" alt="Adventours logo">
+      </a>
+    </div>
+
+
+    <ul class="nav-list">
+      <li class="nav-items">
+        <a (click)="logout()" class="nav-link">Logout</a>
+      </li>
+
+      <li class="nav-items">
+        <a href="#" class="nav-link">{{userdetails?.data.data.name}}</a>
+      </li>
+      <li class="nav-items">
+        <div class="image-container">
+          <img class="imageprofile" src="assets/users/{{userdetails?.data.data.photo}}">
+        </div>
+      </li>
+    </ul>
+
+
+  </nav>
+  <div class="tour-title" data-aos = "zoom-out">
+
+    <h1 class="tour-title-main">{{tour?.data.data.name}}</h1>
+
+    <div class="sub-detail">
+      <ion-icon name="timer-outline"></ion-icon><span>{{tour?.data.data.duration}} Days</span>
+      <ion-icon name="location-outline"></ion-icon><span>{{tour?.data.data.startLocation.description}}</span>
+    </div>
+  </div>
+</div>

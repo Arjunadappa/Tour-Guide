@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&display=swap');
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+
+
+}
+.navcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 1;
+  background : rgb(18, 106, 165);
+  width : 99%;
+  overflow: hidden;
+
+}
+.nav-brand img {
+  width: 3rem;
+  margin-left : 30px;
+
+}
+.nav-list {
+
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+
+
+
+
+
+}
+.nav-items {
+  margin-right: 20px;
+  list-style: none;
+  text-align: center;
+
+
+
+}
+.nav-link {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: all .4s ease-in-out;
+  color : rgba(255, 255, 255, 0.801);
+
+}
+.image-container{
+
+  margin-top : -20px;
+
+}
+
+.imageprofile{
+
+  height : 50px;
+  width : 50px;
+  border-radius : 50%;
+  padding : 5px;
+  margin-right  : 50px;
+}
+a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: black;
+}
+.tour-title{
+
+  background:url("https://i.pinimg.com/originals/43/bc/25/43bc25887c16f470f36edc9186d2856c.jpg");
+  height : 80vh;
+  background-size: cover;
+  position : relative;
+  clip-path : polygon(0 0 , 100% 0 , 100% 85% , 0 100%);
+  margin-top: 5px;
+}
+
+.tour-title-main {
+
+  position: absolute;
+  top : 30%;
+  left : 50%;
+  color : black;
+  font-family: 'Caveat', cursive;
+  font-size : 80px;
+  background : rgba(255, 254, 254, 0.377);
+  padding : 0 50px;
+  clip-path : polygon(10% 0 , 100% 0 , 90% 100% , 0 100%);
+  width : 45%;
+  text-align : center;
+
+
+  transform: translate(-50% , -50%);
+
+}
+.sub-detail{
+  position: absolute;
+  background : rgba(255, 254, 254, 0.747);
+  font-size :  20px;
+  top : 60%;
+  left : 50%;
+  color : rgb(235, 0, 39);
+  padding : 5px;
+
+
+  transform: translate(-50% , -50%);
+
+
+}
