@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpserviceService} from "../httpservice.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import { CommonModule } from "@angular/common";
 import * as moment from 'moment';
 
 @Component({

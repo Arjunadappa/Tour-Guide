@@ -126,29 +126,169 @@
           <div class="gridsearch" >
 
             <div *ngFor="let tour of tours;index as i" class="gridsearch-items result-{{i+1}}">
-              <div class="overlay-side">
-                <div class="image-container">
-                  <img src="assets/image-{{i+1}}.jpg">
+              <div *ngIf="i==0 || i==1">
+                <div class="overlay-side">
+                  <div class="image-container">
+                    <img src="assets/tours/{{tour.imageCover}}">
+                  </div>
                 </div>
-              </div>
-              <div class="image-title">
-                <h1>{{tour.name}}</h1>
-              </div>
-              <div class="card-details">
-                <div class="card-details-item-1">
-                  <h1 class="sml">{{tour.difficulty}} {{tour.duration}}-DAY TOUR</h1>
-                  <h1 class="sml2">{{tour.summary}}</h1>
+                <div class="image-title">
+                  <h1>{{tour.name}}</h1>
                 </div>
-                <div class="card-details-item-2">
-                  <ion-icon class="icon" name="location-outline"></ion-icon><span>{{tour.startLocation.description}}</span>
-                  <ion-icon class="icon" name="calendar-outline"></ion-icon><span>{{getMonth_Year(tour.startDates[0])}}</span>
-                </div>
+                <div class="card-details">
+                  <div class="card-details-item-1">
+                    <h1 class="sml">{{tour.difficulty}} {{tour.duration}}-DAY TOUR</h1>
+                    <h1 class="sml2">{{tour.summary}}</h1>
+                  </div>
+                  <div class="card-details-item-2">
+                    <ion-icon class="icon" name="location-outline"></ion-icon><span>{{tour.startLocation.description}}</span>
+                    <ion-icon class="icon" name="calendar-outline"></ion-icon><span>{{getMonth_Year(tour.startDates[0])}}</span>
+                  </div>
 
-                <div class="button">
-                  <ion-icon name="pricetags-outline"></ion-icon><span>{{this.tours[0].price}}</span>
-                  <button class="details"> Details</button>
+                  <div class="button">
+                    <ion-icon name="pricetags-outline"></ion-icon><span>${{tour.price}}</span>
+                    <button class="details"> Details</button>
+                  </div>
                 </div>
               </div>
+              <div *ngIf="i==2">
+                <div class="overlay-side">
+                                  <div class="image-container full-width">
+
+                                    <img src="assets/tours/{{tour.imageCover}}">
+                                  </div>
+                                </div>
+                                <div class="image-title-3">
+                                  <h1>{{tour.name}}</h1>
+                                </div>
+                                <div class="card-details card-details-3">
+                                  <div class="card-details-item-1">
+                                    <h1 class="sml">{{tour.difficulty}} {{tour.duration}}-DAY TOUR</h1>
+                                    <h1 class="sml2"> {{tour.summary}}</h1>
+                                  </div>
+                                  <div class="card-details-item-2 large3">
+                                    <ion-icon class="icon" name="location-outline"></ion-icon><span>{{tour.startLocation.description}}</span>
+                                    <ion-icon class="icon" name="calendar-outline"></ion-icon><span>{{getMonth_Year(tour.startDates[0])}}</span>
+                                  </div>
+                                  <div class="button button3">
+                                    <ion-icon name="pricetags-outline"></ion-icon><span>${{tour.price}}</span>
+                                    <button class="details"> Details</button>
+                                  </div>
+
+
+
+
+                                </div>
+
+
+              </div>
+              <div *ngIf="i==3">
+                <div class="overlay-4">
+                                  <div class="image-container">
+                                    <img src="assets/tours/{{tour.imageCover}}">
+                                  </div>
+                                </div>
+                                <div class="image-title image-title-4">
+                                  <h1>{{tour.name}}</h1>
+                                </div>
+                                <div class="card-details card-details-4">
+                                  <div class="card-details-item-1">
+                                    <h1 class="sml">{{tour.difficulty}} {{tour.duration}}-DAY TOUR</h1>
+                                    <h1 class="sml2">{{tour.summary}}</h1>
+                                  </div>
+                                  <div class="card-details-item-2">
+                                    <ion-icon class="icon" name="location-outline"></ion-icon><span>{{tour.startLocation.description}}</span>
+                                    <ion-icon class="icon" name="calendar-outline"></ion-icon><span>{{getMonth_Year(tour.startDates[0])}}</span>
+                                  </div>
+
+                                  <div class="button button4">
+                                    <ion-icon name="pricetags-outline"></ion-icon><span>${{tour.price}}</span>
+                                    <button class="details"> Details</button>
+                                  </div>
+                                </div>
+
+
+                </div>
+                <div *ngIf="i==4 ||i==5">
+                  <div class="overlay-side">
+                                    <div class="image-container">
+                                      <img src="assets/tours/{{tour.imageCover}}">
+                                    </div>
+                                  </div>
+                                  <div class="image-title">
+                                    <h1>{{tour.name}}</h1>
+                                  </div>
+                                  <div class="card-details">
+                                    <div class="card-details-item-1">
+                                      <h1 class="sml">{{tour.difficulty}} {{tour.duration}}-DAY TOUR</h1>
+                                      <h1 class="sml2">{{tour.summary}}</h1>
+                                    </div>
+                                    <div class="card-details-item-2">
+                                      <ion-icon class="icon" name="location-outline"></ion-icon><span>{{tour.startLocation.description}}</span>
+                                      <ion-icon class="icon" name="calendar-outline"></ion-icon><span>{{getMonth_Year(tour.startDates[0])}}</span>
+                                    </div>
+
+                                    <div class="button">
+                                      <ion-icon name="pricetags-outline"></ion-icon><span>${{tour.price}}</span>
+                                      <button class="details"> Details</button>
+                                    </div>
+                                  </div>
+
+                </div>
+                <div *ngIf="i==6">
+                  <div class="overlay-4">
+                                    <div class="image-container">
+                                      <img src="assets/tours/{{tour.imageCover}}">
+                                    </div>
+                                  </div>
+                                  <div class="image-title-5">
+                                    <h1>{{tour.name}}</h1>
+                                  </div>
+                                  <div class="card-details card-details-7">
+                                    <div class="card-details-item-1">
+                                      <h1 class="sml">{{tour.difficulty}} {{tour.duration}}-DAY TOUR</h1>
+                                      <h1 class="sml2">{{tour.summary}}</h1>
+                                    </div>
+                                    <div class="card-details-item-2">
+                                      <ion-icon class="icon" name="location-outline"></ion-icon><span>{{tour.startLocation.description}}</span>
+                                      <ion-icon class="icon" name="calendar-outline"></ion-icon><span>{{getMonth_Year(tour.startDates[0])}}</span>
+                                    </div>
+
+                                    <div class="button button7">
+                                      <ion-icon name="pricetags-outline"></ion-icon><span>${{tour.price}}</span>
+                                      <button class="details"> Details</button>
+                                    </div>
+                                  </div>
+
+                </div>
+                <div *ngIf="i==7">
+                  <div class="overlay-4">
+                                    <div class="image-container">
+                                      <img src="assets/tours/{{tour.imageCover}}">
+                                    </div>
+                                  </div>
+                                  <div class="image-title-5">
+                                    <h1>{{tour.name}}</h1>
+                                  </div>
+                                  <div class="card-details card-details-7">
+                                    <div class="card-details-item-1">
+                                      <h1 class="sml">{{tour.difficulty}} {{tour.duration}}-DAY TOUR</h1>
+                                      <h1 class="sml2">{{tour.summary}}</h1>
+                                    </div>
+                                    <div class="card-details-item-2">
+                                      <ion-icon class="icon" name="location-outline"></ion-icon><span>{{tour.startLocation.description}}</span>
+                                      <ion-icon class="icon" name="calendar-outline"></ion-icon><span>{{getMonth_Year(tour.startDates[0])}}</span>
+                                    </div>
+
+                                    <div class="button button7">
+                                      <ion-icon name="pricetags-outline"></ion-icon><span>${{tour.price}}</span>
+                                      <button class="details"> Details</button>
+                                    </div>
+                                  </div>
+
+                  </div>
+
+
             </div>
 <!--            <div class="gridsearch-items result-2">-->
 <!--              <div class="overlay-side">-->

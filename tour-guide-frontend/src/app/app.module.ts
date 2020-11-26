@@ -8,7 +8,6 @@ import {ReactiveFormsModule,FormsModule} from "@angular/forms";
 import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { OverviewComponent } from './overview/overview.component'
-import { CommonModule } from "@angular/common";
 import { ExploreComponent } from './explore/explore.component';
 import { IonicModule } from '@ionic/angular';
 
@@ -28,7 +27,6 @@ import { IonicModule } from '@ionic/angular';
         ReactiveFormsModule,
         HttpClientModule,
         FormsModule,
-        CommonModule,
         IonicModule,
     ],
   providers: [],
