@@ -21,6 +21,7 @@
     "@angular/router": "~10.2.0",
     "@ionic/angular": "^5.5.0",
     "@types/mapbox-gl": "^1.12.8",
+    "aos": "^2.3.4",
     "mapbox-gl": "^1.13.0",
     "moment": "^2.29.1",
     "rxjs": "~6.6.0",

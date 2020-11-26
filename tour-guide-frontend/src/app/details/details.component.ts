@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpserviceService} from "../httpservice.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import * as mapboxgl from 'mapbox-gl';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-details',
@@ -15,6 +16,9 @@ export class DetailsComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute,private httpService: HttpserviceService) { }
 
   ngOnInit(): void {
+    AOS.init({
+      once: true
+    });
     this.httpService.getCurrentUser().subscribe(user => {
       this.userdetails = user;
       console.log(user);
@@ -25,7 +29,7 @@ export class DetailsComponent implements OnInit {
       this.map = new mapboxgl.Map({
         container: 'map',
         accessToken:'pk.eyJ1IjoidHVzaGFyZGciLCJhIjoiY2toeDl6OHFqMjRmZTJycGJ5ZTh0ZnB6eiJ9.BTWJHE9O_pIK9Nm7b1o-fg',
-        style: 'mapbox://styles/mapbox/dark-v10',
+        style: 'mapbox://styles/mapbox/streets-v11',
         zoom: 13,
         center: tour.data.data.startLocation.coordinates
       });
