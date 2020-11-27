@@ -43,4 +43,13 @@ export class HttpserviceService {
   getTour(id) : Observable<any>{
     return this.http.get(`http://localhost:3000/api/v1/tours/${id}`,{withCredentials:true})
   }
+  updateUser(data): Observable<any>{
+    console.log(data)
+    return this.http.patch('http://localhost:3000/api/v1/users/updateMe',data,{withCredentials:true})
+  }
+  updatePassword(data): Observable<any>{
+    console.log(data);
+    return this.http.patch('http://localhost:3000/api/v1/users/updateMyPassword',data,{withCredentials:true})
+  }
+
 }

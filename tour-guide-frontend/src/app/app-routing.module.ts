@@ -5,6 +5,7 @@ import {LoginComponent} from "./login/login.component";
 import {OverviewComponent} from "./overview/overview.component";
 import {ExploreComponent} from "./explore/explore.component";
 import {DetailsComponent} from "./details/details.component";
+import {UserComponent} from "./user/user.component";
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path:'details/:id',
     component: DetailsComponent
+  },
+  {
+    path:'user/:id',
+    component:UserComponent
   }
 ];
 

@@ -13,12 +13,14 @@ export class DetailsComponent implements OnInit {
   userdetails;
   tour
   map: mapboxgl.Map;
+  id;
   constructor(private router: Router, private route: ActivatedRoute,private httpService: HttpserviceService) { }
 
   ngOnInit(): void {
     AOS.init({
       once: true
     });
+    this.id = this.route.snapshot.paramMap.get('id');
     this.httpService.getCurrentUser().subscribe(user => {
       this.userdetails = user;
       console.log(user);

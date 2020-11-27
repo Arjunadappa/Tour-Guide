@@ -17,7 +17,7 @@
       </li>
       <li class="nav-items">
         <div class="image-container">
-          <img class="imageprofile" src="assets/users/{{userdetails?.data.data.photo}}">
+          <img [routerLink]="['/user',id]" class="imageprofile" src="assets/users/{{userdetails?.data.data.photo}}">
         </div>
       </li>
     </ul>

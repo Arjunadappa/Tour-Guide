@@ -11,6 +11,7 @@ import { OverviewComponent } from './overview/overview.component'
 import { ExploreComponent } from './explore/explore.component';
 import { IonicModule } from '@ionic/angular';
 import { DetailsComponent } from './details/details.component';
+import { UserComponent } from './user/user.component';
 
 
 
@@ -21,7 +22,8 @@ import { DetailsComponent } from './details/details.component';
     LoginComponent,
     OverviewComponent,
     ExploreComponent,
-    DetailsComponent
+    DetailsComponent,
+    UserComponent
   ],
     imports: [
         BrowserModule,
