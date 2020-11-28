@@ -29,9 +29,16 @@ export class HttpserviceService {
     return this.http.post('http://localhost:3000/api/v1/users/login',data,this.httpFormOptions)
   }
   getCurrentUser() : Observable<any>{
-    return this.http.get('http://localhost:3000/api/v1/users/me',{withCredentials:true})
+    const jwt = JSON.parse(localStorage.getItem('jwt'));
+    const header = new HttpHeaders({ 'Authorization': `Bearer ${jwt}` });
+    const options = {
+      headers: header,
+      withCredentials:true
+   };
+    return this.http.get('http://localhost:3000/api/v1/users/me',options);
   }
   logout() : Observable<any>{
+    localStorage.removeItem('jwt');
     return this.http.get('http://localhost:3000/api/v1/users/logout',{withCredentials:true})
   }
   emitChange(change: any) {
@@ -45,11 +52,23 @@ export class HttpserviceService {
   }
   updateUser(data): Observable<any>{
     console.log(data)
-    return this.http.patch('http://localhost:3000/api/v1/users/updateMe',data,{withCredentials:true})
+    const jwt = JSON.parse(localStorage.getItem('jwt'));
+    const header = new HttpHeaders({ 'Authorization': `Bearer ${jwt}` });
+    const options = {
+      headers: header,
+      withCredentials:true
+   };
+    return this.http.patch('http://localhost:3000/api/v1/users/updateMe',data,options)
   }
   updatePassword(data): Observable<any>{
-    console.log(data);
-    return this.http.patch('http://localhost:3000/api/v1/users/updateMyPassword',data,{withCredentials:true})
+    
+    const jwt = JSON.parse(localStorage.getItem('jwt'));
+    const header = new HttpHeaders({ 'Authorization': `Bearer ${jwt}` });
+    const options = {
+      headers: header,
+      withCredentials:true
+   };
+    return this.http.patch('http://localhost:3000/api/v1/users/updateMyPassword',data,options)
   }
 
 }

@@ -66,7 +66,7 @@ export class UserComponent implements OnInit {
       return;
     }
     this.httpService.updatePassword(formdata).subscribe((res)=>{
-      console.log(res)
+      localStorage.setItem('jwt',JSON.stringify(res.token))
 
     })
     this.passwordChangeForm.setValue({passwordCurrent:'',password:'',passwordConfirm:''})

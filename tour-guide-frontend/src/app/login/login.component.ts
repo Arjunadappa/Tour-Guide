@@ -38,6 +38,7 @@ export class LoginComponent implements OnInit {
     this.httpService.login(urlencoded.toString()).subscribe(
       (data) => {
         console.log(data)
+        localStorage.setItem('jwt',JSON.stringify(data.token))
         this.httpService.emitChange(true)
         this.router.navigate(["/"])
       }
