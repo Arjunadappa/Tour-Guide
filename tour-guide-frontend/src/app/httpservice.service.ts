@@ -23,33 +23,33 @@ export class HttpserviceService {
 
   };
   createUser(data) : Observable<any>{
-    return this.http.post('http://localhost:3000/api/v1/users/signup',data,this.httpOptions)
+    return this.http.post('https://ancient-castle-63110.herokuapp.com/api/v1/users/signup',data,this.httpOptions)
   }
   login(data) : Observable<any>{
-    return this.http.post('http://localhost:3000/api/v1/users/login',data,this.httpFormOptions)
+    return this.http.post('https://ancient-castle-63110.herokuapp.com/api/v1/users/login',data,this.httpFormOptions)
   }
   getCurrentUser() : Observable<any>{
-    return this.http.get('http://localhost:3000/api/v1/users/me',{withCredentials:true})
+    return this.http.get('https://ancient-castle-63110.herokuapp.com/api/v1/users/me',{withCredentials:true})
   }
   logout() : Observable<any>{
-    return this.http.get('http://localhost:3000/api/v1/users/logout',{withCredentials:true})
+    return this.http.get('https://ancient-castle-63110.herokuapp.com/api/v1/users/logout',{withCredentials:true})
   }
   emitChange(change: any) {
     this.emitChangeSource.next(change);
   }
   getTours() : Observable<any>{
-    return this.http.get('http://localhost:3000/api/v1/tours',{withCredentials:true})
+    return this.http.get('https://ancient-castle-63110.herokuapp.com/api/v1/tours',{withCredentials:true})
   }
   getTour(id) : Observable<any>{
-    return this.http.get(`http://localhost:3000/api/v1/tours/${id}`,{withCredentials:true})
+    return this.http.get(`https://ancient-castle-63110.herokuapp.com/api/v1/tours/${id}`,{withCredentials:true})
   }
   updateUser(data): Observable<any>{
     console.log(data)
-    return this.http.patch('http://localhost:3000/api/v1/users/updateMe',data,{withCredentials:true})
+    return this.http.patch('https://ancient-castle-63110.herokuapp.com/api/v1/users/updateMe',data,{withCredentials:true})
   }
   updatePassword(data): Observable<any>{
     console.log(data);
-    return this.http.patch('http://localhost:3000/api/v1/users/updateMyPassword',data,{withCredentials:true})
+    return this.http.patch('https://ancient-castle-63110.herokuapp.com/api/v1/users/updateMyPassword',data,{withCredentials:true})
   }
 
 }

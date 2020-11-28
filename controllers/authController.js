@@ -21,7 +21,7 @@ const createSendToken = (user, statusCode, req, res) => {
     ),
     httpOnly: true,
     sameSite: 'Lax',
-    secure: false
+    secure: true
   });
 
   // Remove password from output
