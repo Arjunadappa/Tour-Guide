@@ -23,10 +23,10 @@ export class HttpserviceService {
 
   };
   createUser(data) : Observable<any>{
-    return this.http.post('http://localhost:3000/api/v1/users/signup',data,this.httpOptions)
+    return this.http.post('https://adventours--app.herokuapp.com/api/v1/users/signup',data,this.httpOptions)
   }
   login(data) : Observable<any>{
-    return this.http.post('http://localhost:3000/api/v1/users/login',data,this.httpFormOptions)
+    return this.http.post('https://adventours--app.herokuapp.com/api/v1/users/login',data,this.httpFormOptions)
   }
   getCurrentUser() : Observable<any>{
     const jwt = JSON.parse(localStorage.getItem('jwt'));
@@ -35,20 +35,20 @@ export class HttpserviceService {
       headers: header,
       withCredentials:true
    };
-    return this.http.get('http://localhost:3000/api/v1/users/me',options);
+    return this.http.get('https://adventours--app.herokuapp.com/api/v1/users/me',options);
   }
   logout() : Observable<any>{
     localStorage.removeItem('jwt');
-    return this.http.get('http://localhost:3000/api/v1/users/logout',{withCredentials:true})
+    return this.http.get('https://adventours--app.herokuapp.com/api/v1/users/logout',{withCredentials:true})
   }
   emitChange(change: any) {
     this.emitChangeSource.next(change);
   }
   getTours() : Observable<any>{
-    return this.http.get('http://localhost:3000/api/v1/tours',{withCredentials:true})
+    return this.http.get('https://adventours--app.herokuapp.com/api/v1/tours',{withCredentials:true})
   }
   getTour(id) : Observable<any>{
-    return this.http.get(`http://localhost:3000/api/v1/tours/${id}`,{withCredentials:true})
+    return this.http.get(`https://adventours--app.herokuapp.com/api/v1/tours/${id}`,{withCredentials:true})
   }
   updateUser(data): Observable<any>{
     console.log(data)
@@ -58,7 +58,7 @@ export class HttpserviceService {
       headers: header,
       withCredentials:true
    };
-    return this.http.patch('http://localhost:3000/api/v1/users/updateMe',data,options)
+    return this.http.patch('https://adventours--app.herokuapp.com/api/v1/users/updateMe',data,options)
   }
   updatePassword(data): Observable<any>{
     
@@ -68,7 +68,7 @@ export class HttpserviceService {
       headers: header,
       withCredentials:true
    };
-    return this.http.patch('http://localhost:3000/api/v1/users/updateMyPassword',data,options)
+    return this.http.patch('https://adventours--app.herokuapp.com/api/v1/users/updateMyPassword',data,options)
   }
 
 }
