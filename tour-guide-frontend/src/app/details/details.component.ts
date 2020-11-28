@@ -31,7 +31,7 @@ export class DetailsComponent implements OnInit {
       this.map = new mapboxgl.Map({
         container: 'map',
         accessToken:'pk.eyJ1IjoidHVzaGFyZGciLCJhIjoiY2toeDl6OHFqMjRmZTJycGJ5ZTh0ZnB6eiJ9.BTWJHE9O_pIK9Nm7b1o-fg',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style: 'mapbox://styles/mapbox/dark-v10',
         zoom: 13,
         center: tour.data.data.startLocation.coordinates
       });
