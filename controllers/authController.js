@@ -22,7 +22,7 @@ const createSendToken = (user, statusCode, req, res) => {
     domain: 'http://localhost:4200',
     httpOnly: true,
     sameSite: 'Lax',
-    secure: true
+    secure: false
   });
 
   // Remove password from output
