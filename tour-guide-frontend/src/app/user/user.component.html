@@ -3,6 +3,10 @@
   <div class="user-view">
     <nav class="user-view__menu">
       <ul class="side-nav">
+        <li [ngClass]="{'side-nav--active' : !settingInfo}" (click)="returnExplore()"><a>
+          <svg>
+            <use xlink:href="assets/icons.svg#icon-arrow-left"></use>
+          </svg>Go Back</a></li>
         <li [ngClass]="{'side-nav--active' : settingInfo}" (click)="onBookingsClick()"><a >
           <svg>
             <use xlink:href="assets/icons.svg#icon-settings"></use>
@@ -11,6 +15,8 @@
           <svg>
             <use xlink:href="assets/icons.svg#icon-briefcase"></use>
           </svg>My bookings</a></li>
+         
+          
         
       </ul>
     </nav>
@@ -60,12 +66,12 @@
         <div class= "flex bookingtab">
           <div class="overlay-side  flex-item">
             <div class="image-container">
-              <img src="assets/tours/{{tour.imageCover}}">
+              <img src="assets/tours/{{tour?.imageCover}}">
             </div>
           </div>
           <div class="column">
           <div class="image-title">
-            <h1>{{tour.name}}</h1>
+            <h1>{{tour?.name}}</h1>
           </div>
           <div class="card-details">
             <div class="card-details-item-1">

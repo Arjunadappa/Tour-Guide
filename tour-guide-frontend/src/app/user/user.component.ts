@@ -87,4 +87,9 @@ export class UserComponent implements OnInit {
     return d.format('MMM YYYY')
   }
 
+  returnExplore(){
+
+    this.router.navigate(['/explore'])
+  }
+
 }
