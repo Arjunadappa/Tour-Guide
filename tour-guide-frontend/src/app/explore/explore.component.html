@@ -19,7 +19,7 @@
             <li class="nav-items">
               <a href="#" class="nav-link">API Documentation</a>
             </li>
-            <li class="nav-items">
+            <li class="nav-items" *ngIf="!userdetails">
               <a [routerLink]="['/sign-up']" class="nav-link">Signup</a>
             </li>
             <li class="nav-items">
