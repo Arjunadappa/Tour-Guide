@@ -11,14 +11,20 @@ import {checkPasswords} from "./passwordchecker";
 })
 export class UserComponent implements OnInit {
   userdetails;
+  bookings;
   passwordChangeForm:FormGroup;
-  userDetailsForm:FormGroup
+  userDetailsForm:FormGroup;
+  settingInfo = true;
   constructor(private router: Router, private route: ActivatedRoute,private httpService: HttpserviceService,private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.httpService.getCurrentUser().subscribe(user => {
       this.userdetails = user;
       console.log(user);
+    })
+    this.httpService.getBookings().subscribe(tours => {
+      this.bookings = tours.data.data;
+      console.log(this.bookings);
     })
     this.userDetailsForm = this.formBuilder.group(
       {
@@ -71,6 +77,9 @@ export class UserComponent implements OnInit {
     })
     this.passwordChangeForm.setValue({passwordCurrent:'',password:'',passwordConfirm:''})
 
+  }
+  onBookingsClick(){
+    this.settingInfo = false
   }
 
 }

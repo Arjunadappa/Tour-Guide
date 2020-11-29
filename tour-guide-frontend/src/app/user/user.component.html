@@ -7,7 +7,7 @@
           <svg>
             <use xlink:href="assets/icons.svg#icon-settings"></use>
           </svg>Settings</a></li>
-        <li><a href="#">
+        <li (click)="onBookingsClick()"><a href="#">
           <svg>
             <use xlink:href="assets/icons.svg#icon-briefcase"></use>
           </svg>My bookings</a></li>
@@ -42,7 +42,7 @@
         </ul>
       </div>
     </nav>
-    <div class="user-view__content">
+    <div class="user-view__content" *ngIf='settingInfo'>
       <div class="user-view__form-container">
         <h2 class="heading-secondary ma-bt-md">Your account settings</h2>
         <form class="form form-user-data" [formGroup]="userDetailsForm" (ngSubmit)="onSubmit(userDetailsForm.value)" >

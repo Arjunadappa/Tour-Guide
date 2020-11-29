@@ -81,4 +81,14 @@ export class HttpserviceService {
    return this.http.get(`https://adventours--app.herokuapp.com/api/v1/bookings/checkout-session/${id}`,options)
   }
 
+  getBookings():Observable<any>{
+    const jwt = JSON.parse(localStorage.getItem('jwt'));
+    const header = new HttpHeaders({ 'Authorization': `Bearer ${jwt}` });
+    const options = {
+      headers: header,
+      withCredentials:true
+   };
+   return this.http.get(`https://adventours--app.herokuapp.com/api/v1/bookings/my-tours`,options)
+  }
+
 }
