@@ -11,38 +11,10 @@
           <svg>
             <use xlink:href="assets/icons.svg#icon-briefcase"></use>
           </svg>My bookings</a></li>
-        <li><a href="#">
-          <svg>
-            <use xlink:href="assets/icons.svg#icon-star"></use>
-          </svg>My reviews</a></li>
-        <li><a href="#">
-          <svg>
-            <use xlink:href="assets/icons.svg#icon-credit-card"></use>
-          </svg>Billing</a></li>
+        
       </ul>
-      <div *ngIf="userdetails?.data.data.role==='admin'" class="admin-nav">
-        <h5 class="admin-nav__heading">Admin</h5>
-        <ul class="side-nav">
-          <li><a href="#">
-            <svg>
-              <use xlink:href="assets/icons.svg#icon-map"></use>
-            </svg>Manage tours</a></li>
-          <li><a href="#">
-            <svg>
-              <use xlink:href="assets/icons.svg#icon-users"></use>
-            </svg>Manage users</a></li>
-          <li><a href="#">
-            <svg>
-              <use xlink:href="assets/icons.svg#icon-star"></use>
-            </svg>Manage reviews</a></li>
-          <li><a href="#">
-            <svg>
-              <use xlink:href="assets/icons.svg#icon-briefcase"></use>
-            </svg></a></li>
-        </ul>
-      </div>
     </nav>
-    <div class="user-view__content" *ngIf='settingInfo'>
+    <div class="user-view__content" *ngif='settingInfo'>
       <div class="user-view__form-container">
         <h2 class="heading-secondary ma-bt-md">Your account settings</h2>
         <form class="form form-user-data" [formGroup]="userDetailsForm" (ngSubmit)="onSubmit(userDetailsForm.value)" >
