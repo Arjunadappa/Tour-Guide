@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {HttpserviceService} from "../httpservice.service";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {checkPasswords} from "./passwordchecker";
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-user',
@@ -79,7 +80,11 @@ export class UserComponent implements OnInit {
 
   }
   onBookingsClick(){
-    this.settingInfo = false
+    this.settingInfo = !this.settingInfo;
+  }
+  getMonth_Year(date){
+    let d = moment(date);
+    return d.format('MMM YYYY')
   }
 
 }

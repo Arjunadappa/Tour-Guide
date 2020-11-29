@@ -3,18 +3,18 @@
   <div class="user-view">
     <nav class="user-view__menu">
       <ul class="side-nav">
-        <li class="side-nav--active"><a href="#">
+        <li [ngClass]="{'side-nav--active' : settingInfo}" (click)="onBookingsClick()"><a >
           <svg>
             <use xlink:href="assets/icons.svg#icon-settings"></use>
           </svg>Settings</a></li>
-        <li (click)="onBookingsClick()"><a href="#">
+        <li [ngClass]="{'side-nav--active' : !settingInfo}" (click)="onBookingsClick()"><a >
           <svg>
             <use xlink:href="assets/icons.svg#icon-briefcase"></use>
           </svg>My bookings</a></li>
         
       </ul>
     </nav>
-    <div class="user-view__content" *ngif='settingInfo'>
+    <div class="user-view__content" *ngIf='settingInfo'>
       <div class="user-view__form-container">
         <h2 class="heading-secondary ma-bt-md">Your account settings</h2>
         <form class="form form-user-data" [formGroup]="userDetailsForm" (ngSubmit)="onSubmit(userDetailsForm.value)" >
@@ -52,6 +52,36 @@
             <button class="btn btn--small btn--green">Save password</button>
           </div>
         </form>
+      </div>
+    </div>
+    <div class="user-view__content" *ngIf='!settingInfo'>
+      <h2 class="heading-secondary ma-bt-md">Your Bookings</h2>
+      <div *ngFor="let tour of bookings;index as i" class="gridsearch-items result-1">
+        <div >
+          <div class="overlay-side">
+            <div class="image-container">
+              <img src="assets/tours/{{tour.imageCover}}">
+            </div>
+          </div>
+          <div class="image-title">
+            <h1>{{tour.name}}</h1>
+          </div>
+          <div class="card-details">
+            <div class="card-details-item-1">
+              <h1 class="sml">{{tour.difficulty}} {{tour.duration}}-DAY TOUR</h1>
+              <h1 class="sml2">{{tour.summary}}</h1>
+            </div>
+            <div class="card-details-item-2">
+              <ion-icon class="icon" name="location-outline"></ion-icon><span>{{tour.startLocation.description}}</span>
+              <ion-icon class="icon" name="calendar-outline"></ion-icon><span>{{getMonth_Year(tour.startDates[0])}}</span>
+            </div>
+
+            <div class="button">
+              <ion-icon name="pricetags-outline"></ion-icon><span>${{tour.price}}</span>
+              <button class="details" [routerLink]="['/details',tour.id]"> Details</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -12,6 +12,7 @@ import { ExploreComponent } from './explore/explore.component';
 import { IonicModule } from '@ionic/angular';
 import { DetailsComponent } from './details/details.component';
 import { UserComponent } from './user/user.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -32,6 +33,7 @@ import { UserComponent } from './user/user.component';
         HttpClientModule,
         FormsModule,
         IonicModule,
+        CommonModule
     ],
   providers: [],
   bootstrap: [AppComponent]
