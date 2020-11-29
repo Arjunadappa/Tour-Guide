@@ -58,10 +58,20 @@
 .bookingtab{
 
   display : flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap : wrap;
   
 }
+
+.image-container{
+
+  width : 40px;
+  height : 50px;
+}
+
+
+
+
 
 
 
