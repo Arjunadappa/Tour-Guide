@@ -57,8 +57,8 @@
     <div class="user-view__content" *ngIf='!settingInfo'>
       <h2 class="heading-secondary ma-bt-md">Your Bookings</h2>
       <div *ngFor="let tour of bookings;index as i" class="gridsearch-items result-1">
-        <div >
-          <div class="overlay-side">
+        <div class= "flex bookingtab">
+          <div class="overlay-side  flex-item">
             <div class="image-container">
               <img src="assets/tours/{{tour.imageCover}}">
             </div>

@@ -53,6 +53,21 @@
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
 }
+
+
+.bookingtab{
+
+  display : flex;
+  justify-content: center;
+  flex-wrap : wrap;
+  
+}
+
+
+
+
+
+
 .side-nav a:link,
 .side-nav a:visited {
   padding: 1rem 4rem;
