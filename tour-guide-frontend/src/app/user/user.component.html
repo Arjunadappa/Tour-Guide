@@ -63,6 +63,7 @@
               <img src="assets/tours/{{tour.imageCover}}">
             </div>
           </div>
+          <div class="column">
           <div class="image-title">
             <h1>{{tour.name}}</h1>
           </div>
@@ -77,12 +78,13 @@
             </div>
 
             <div class="button">
-              <ion-icon name="pricetags-outline"></ion-icon><span>${{tour.price}}</span>
+              <ion-icon name="pricetags-outline"></ion-icon><span class="price">${{tour.price}}</span>
               <button class="details" [routerLink]="['/details',tour.id]"> Details</button>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </main>
