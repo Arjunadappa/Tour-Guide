@@ -8,13 +8,18 @@ import {HttpserviceService} from "../httpservice.service";
   styleUrls: ['./overview.component.scss']
 })
 export class OverviewComponent implements OnInit {
-  tours
+  tours;
+  userdetails;
   constructor(private router: Router, private route: ActivatedRoute,private httpService: HttpserviceService) { }
 
   ngOnInit(): void {
     this.httpService.getTours().subscribe((data) => {
       this.tours = data;
       console.log(data)
+    })
+    this.httpService.getCurrentUser().subscribe(user => {
+      this.userdetails = user;
+      //console.log(user);
     })
   }
 

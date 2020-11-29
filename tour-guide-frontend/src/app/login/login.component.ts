@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
         console.log(data)
         localStorage.setItem('jwt',JSON.stringify(data.token))
         this.httpService.emitChange(true)
-        this.router.navigate(["/"])
+        this.router.navigate(["/explore"])
       }
       ,(error => console.log(error))
     )

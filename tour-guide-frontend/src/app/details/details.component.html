@@ -27,7 +27,7 @@
 
 
   </nav>
-  <div class="tour-title" data-aos = "zoom-out">
+  <div style="background:url('assets/tours/{{tour.data.data.imageCover}}')" class="tour-title" data-aos = "zoom-out">
 
     <h1 class="tour-title-main">{{tour?.data.data.name}}</h1>
 
@@ -45,7 +45,7 @@
       <div class="quick-facts-item" data-aos = "slide-right"data-aos-delay="70">
         <ion-icon name="calendar-outline"></ion-icon>
         <h1 class="fact-title"> Next Date</h1>
-        <h1 class="fact-title-sub">June 2021</h1>
+        <h1 class="fact-title-sub">{{getMonth_Year(tour?.data.data.startDates[0])}}</h1>
       </div>
       <div class="quick-facts-item" data-aos = "slide-right" data-aos-delay="300">
         <ion-icon name="analytics-outline"></ion-icon>

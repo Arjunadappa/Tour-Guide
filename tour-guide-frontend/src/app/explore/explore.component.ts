@@ -11,6 +11,7 @@ import * as moment from 'moment';
 })
 export class ExploreComponent implements OnInit {
   tours: any[];
+  userdetails;
   constructor(private httpService:HttpserviceService,private router: Router, private route: ActivatedRoute) { }
 
   getMonth_Year(date){
@@ -22,6 +23,10 @@ export class ExploreComponent implements OnInit {
     this.httpService.getTours().subscribe((results) => {
       this.tours = results.data.data;
       console.log(this.tours)
+    })
+    this.httpService.getCurrentUser().subscribe(user => {
+      this.userdetails = user;
+      //console.log(user);
     })
   }
 

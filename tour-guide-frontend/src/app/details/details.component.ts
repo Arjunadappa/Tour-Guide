@@ -5,6 +5,7 @@ import * as mapboxgl from 'mapbox-gl';
 import * as AOS from 'aos';
 import {loadStripe} from '@stripe/stripe-js';
  //const stripe =  await loadStripe('pk_test_51HrzlyFTIXIOjKWYrEV7wiZ3VJmDbZKjjZ2gTdoEF0ggwd4biJA29A7TjncZQSfl3t6Ay9Qokswp85MrfzOLetiq00Dj4ixmWO');
+ import * as moment from 'moment';
 
 @Component({
   selector: 'app-details',
@@ -81,6 +82,10 @@ export class DetailsComponent implements OnInit {
       //   sessionId: this.session.data.session.id
       // });
     },(error => console.log(error)))
+  }
+  getMonth_Year(date){
+    let d = moment(date);
+    return d.format('MMM YYYY')
   }
 
 

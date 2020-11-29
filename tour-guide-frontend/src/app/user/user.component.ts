@@ -21,11 +21,11 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
     this.httpService.getCurrentUser().subscribe(user => {
       this.userdetails = user;
-      console.log(user);
+      // console.log(user);
     })
     this.httpService.getBookings().subscribe(tours => {
       this.bookings = tours.data.data;
-      console.log(this.bookings);
+      // console.log(this.bookings);
     })
     this.userDetailsForm = this.formBuilder.group(
       {
